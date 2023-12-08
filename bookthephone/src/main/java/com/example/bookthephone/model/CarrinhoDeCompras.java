@@ -15,10 +15,10 @@ public class CarrinhoDeCompras {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Ebook> ebooks;
 
-    @Column(name = "valor_total")
+    @Column(name = "valor_total", nullable = false)
     private double valorTotal;
 
-    @Column(name = "data_compra")
+    @Column(name = "data_compra", nullable = false)
     private LocalDateTime dataCompra;
 
     public CarrinhoDeCompras() {
