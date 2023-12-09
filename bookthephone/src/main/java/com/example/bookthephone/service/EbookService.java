@@ -1,5 +1,6 @@
 package com.example.bookthephone.service;
 
+import com.example.bookthephone.dto.EbookDetailsDTO;
 import com.example.bookthephone.model.Ebook;
 import com.example.bookthephone.repository.EbookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
