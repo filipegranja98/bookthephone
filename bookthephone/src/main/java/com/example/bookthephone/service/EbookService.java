@@ -22,7 +22,21 @@ public class EbookService {
 
     public Ebook retornarEbookPelotitulo(String titulo){
 
-
         return ebookRepository.findByTitulo(titulo);
+    }
+
+    public Ebook obterEbookPorId(Long id) {
+        return ebookRepository.findById(id).orElse(null);
+    }
+
+    public EbookDetailsDTO mostrarDetalhes(Ebook ebook) {
+        EbookDetailsDTO ebookDetails = new EbookDetailsDTO();
+        ebookDetails.setId(ebook.getId());
+        ebookDetails.setTitulo(ebook.getTitulo());
+        ebookDetails.setAutor(ebook.getAutor());
+        ebookDetails.setDataPublicacao(ebook.getDataPublicacao());
+        ebookDetails.setPreco(ebook.getPreco());
+
+        return ebookDetails;
     }
 }

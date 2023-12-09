@@ -19,9 +19,20 @@ public class EbookController {
 
         this.ebookService = ebookService;
     }
+    
     @PostMapping
     public Ebook criarEbook(@RequestBody Ebook ebook){
 
         return ebookService.criarEbook(ebook);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Ebook> obterEbookPorId(@PathVariable Long id) {
+        Ebook ebook = ebookService.obterEbookPorId(id);
+        if (ebook != null) {
+            return ResponseEntity.ok(ebook);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }
