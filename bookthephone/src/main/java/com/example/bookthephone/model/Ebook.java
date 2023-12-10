@@ -26,6 +26,9 @@ public class Ebook {
 
 /*    @Column(nullable = false)
     private ArrayList<String> generoEbooks;*/
+    @ManyToOne
+    @JoinColumn(name = "biblioteca_id")
+    private Biblioteca biblioteca;
 
     @Column(nullable = false)
     private double preco;
@@ -98,4 +101,11 @@ public class Ebook {
         this.preco = preco;
     }
 
+    public Biblioteca getBiblioteca() {
+        return biblioteca;
+    }
+
+    public void setBiblioteca(Biblioteca biblioteca) {
+        this.biblioteca = biblioteca;
+    }
 }
