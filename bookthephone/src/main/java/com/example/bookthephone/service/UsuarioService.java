@@ -1,7 +1,7 @@
 package com.example.bookthephone.service;
 
-import com.BooksThePhone.Projeto.de.PI3.model.Usuario;
-import com.BooksThePhone.Projeto.de.PI3.repository.UsuarioRepository;
+import com.example.bookthephone.model.Usuario;
+import com.example.bookthephone.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
