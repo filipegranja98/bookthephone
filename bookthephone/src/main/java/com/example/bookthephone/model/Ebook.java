@@ -5,8 +5,9 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-@Entity
-public class Ebook {
+
+@MappedSuperclass
+public abstract class Ebook {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,14 +19,9 @@ public class Ebook {
     @Column(nullable = false)
     private String autor;
 
-    /*@Column(nullable = false)
-    private Editora editora;*/
-
     @Column(nullable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime dataPublicacao;
 
-/*    @Column(nullable = false)
-    private ArrayList<String> generoEbooks;*/
     @ManyToOne
     @JoinColumn(name = "biblioteca_id")
     private Biblioteca biblioteca;
@@ -35,13 +31,11 @@ public class Ebook {
 
     public Ebook () {}
 
-    public Ebook(long id, String titulo, String autor /*Editora editora*//*, LocalDateTime dataPublicacao*/,/*ArrayList<String> generoEbooks*/ double preco) {
+    public Ebook(long id, String titulo, String autor, LocalDateTime dataPublicacao*/,/*ArrayList<String> generoEbooks*/ double preco) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
-//        this.editora = editora;
 //        this.dataPublicacao = LocalDateTime.now();
-//        this.generoEbooks = generoEbooks;
         this.preco = preco;
     }
 
@@ -70,14 +64,6 @@ public class Ebook {
         this.autor = autor;
     }
 
-//    public Editora getEditora() {
-//        return editora;
-//    }
-//
-//    public void setEditora(Editora editora) {
-//        this.editora = editora;
-//    }
-
     public LocalDateTime getDataPublicacao() {
         return dataPublicacao;
     }
@@ -85,13 +71,6 @@ public class Ebook {
     public void setDataPublicacao(LocalDateTime dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
-
-//    public ArrayList<String> getGeneroEbooks() {
-//        return generoEbooks;
-//    }
-//    public void setGeneroEbooks(ArrayList<String> generoEbooks) {
-//        this.generoEbooks = generoEbooks;
-//    }
 
     public double getPreco() {
         return preco;
