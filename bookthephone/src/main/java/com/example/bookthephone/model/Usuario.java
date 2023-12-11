@@ -23,10 +23,6 @@ public class Usuario {
         this.numeroContato = numeroContato;
 
     }
-
-    public void comentarEbook() {
-        System.out.println("Bla bla bla");
-    }
     public String getNome() {
         return nome;
     }
