@@ -2,7 +2,7 @@ package com.example.bookthephone.controller;
 import com.example.bookthephone.model.CarrinhoDeCompras;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.example.bookthephone.model.Ebook
+import com.example.bookthephone.model.Ebook;
 import java.util.List;
 
 @RestController - 
