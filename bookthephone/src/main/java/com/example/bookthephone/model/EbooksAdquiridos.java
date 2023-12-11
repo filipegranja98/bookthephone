@@ -1,4 +1,4 @@
-package com.poo.aulaspring.model;
+package com.example.bookthephone.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
