@@ -43,11 +43,4 @@ public class UsuarioColaborador extends Usuario  {
     public void setBiblioteca(Biblioteca biblioteca) {
         this.biblioteca = biblioteca;
     }
-    public void adiquirirEbook(Ebook ebook){
-        carrinho.addAoCarrinho(ebook);
-    }
-    public Ebook postarEbook(String titulo, UsuarioColaborador autor, Editoras editora, LocalDate dataPublicacao, ArrayList<String> generos, double preco, Editoras patrocinio, LocalDateTime localDateTime){
-        Ebook e = new EbooksAutorais(titulo, autor, editora, dataPublicacao, generos, preco, patrocinio, localDateTime);
-        return e;
-    }
 }

@@ -29,4 +29,9 @@ public class UsuarioService {
     public Optional<Usuario> retornarUsuarioPeloNome(String nome){
         return Optional.ofNullable(usuarioRepository.findByNome(nome));
     }
+
+    @Autowired
+    public void comentarEbook() {
+        System.out.println("Bla bla bla");
+    }
 }
