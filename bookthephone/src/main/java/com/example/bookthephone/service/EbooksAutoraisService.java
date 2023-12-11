@@ -1,7 +1,7 @@
-package com.poo.aulaspring.service;
+package com.example.bookthephone.service;
 
-import com.poo.aulaspring.model.EbookAutorais;
-import com.poo.aulaspring.repository.EbookAutoraisRepository;
+import com.example.bookthephone.model.EbookAutorais;
+import com.example.bookthephone.repository.EbookAutoraisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
